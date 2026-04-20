@@ -1,0 +1,84 @@
+body { font-family: 'Source Sans 3', sans-serif; background-color: ivory; color: darkslategray; line-height: 1.65; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+/* NAV */
+.navbar { display: flex; align-items: center; justify-content: space-between; padding: 15px 5%; background-color: white; border-bottom: 2px solid lavender; position: sticky; top: 0; z-index: 100; }
+.nav-brand { font-family: 'Merriweather', serif; font-size: 24px; font-weight: bold; color: mediumpurple; text-decoration: none; }
+.nav-links { display: flex; gap: 20px; align-items: center; }
+.nav-links a { text-decoration: none; color: slategray; font-weight: bold; }
+.nav-links a:hover { color: mediumpurple; }
+.nav-dash { background-color: mediumpurple; color: white !important; padding: 8px 15px; border-radius: 8px; }
+.nav-dash:hover { background-color: rebeccapurple !important; }
+.dash-nav { background-color: rebeccapurple; border-bottom-color: rebeccapurple; }
+.dash-nav .nav-brand { color: lightyellow; }
+.dash-nav-title { color: lavender; font-weight: bold; }
+.nav-back { color: lavender !important; text-decoration: none; }
+
+/* HERO */
+.hero { padding: 60px 5%; background-color: ivory; text-align: center; }
+.hero-tag { font-size: 12px; font-weight: bold; text-transform: uppercase; color: goldenrod; }
+.hero-title { font-family: 'Merriweather', serif; font-size: 48px; color: mediumpurple; margin: 10px 0; }
+.hero-subtitle { font-size: 18px; color: goldenrod; font-weight: bold; margin-bottom: 15px; }
+.hero-desc { color: dimgray; max-width: 600px; margin: 0 auto 30px; }
+.btn-primary { display: inline-block; background-color: mediumpurple; color: white; padding: 12px 25px; border-radius: 8px; font-weight: bold; text-decoration: none; border: none; cursor: pointer; }
+.btn-primary:hover { background-color: rebeccapurple; }
+
+/* 3 COLS */
+.section-heading { font-family: 'Merriweather', serif; font-size: 28px; color: rebeccapurple; text-align: center; margin-top: 40px; }
+.section-subtext { text-align: center; color: dimgray; max-width: 600px; margin: 10px auto 30px; }
+.why-section { padding: 40px 5%; background-color: white; }
+.three-cols { display: flex; justify-content: space-between; gap: 20px; max-width: 1000px; margin: 0 auto; }
+.col-card { background-color: ivory; border: 2px solid lavender; border-radius: 8px; padding: 20px; text-align: center; flex: 1; box-shadow: 2px 2px 10px gainsboro; }
+.col-icon { font-size: 35px; margin-bottom: 10px; }
+.col-card h3 { color: rebeccapurple; margin-bottom: 10px; font-family: 'Merriweather', serif; }
+
+/* NUTRITION TABLE */
+.nutrition-section { padding: 40px 5%; background-color: ivory; }
+.table-wrap { max-width: 1000px; margin: 0 auto; overflow-x: auto; box-shadow: 2px 2px 10px gainsboro; }
+.nutrition-table { width: 100%; border-collapse: collapse; background-color: white; }
+.nutrition-table th { background-color: rebeccapurple; color: white; padding: 15px; }
+.nutrition-table td { padding: 12px; border: 1px solid lavender; text-align: center; color: slategray; }
+.nutrition-table .yes { color: mediumseagreen; font-weight: bold; }
+.nutrition-table .no { color: lightcoral; font-weight: bold; }
+.figo-row { background-color: honeydew; border-top: 2px solid mediumseagreen; }
+.figo-row td { color: darkslategray; font-weight: bold; }
+
+/* ORDER FORM */
+.order-section { padding: 40px 5%; background-color: white; }
+.order-container { max-width: 500px; margin: 0 auto; background-color: ivory; padding: 30px; border: 2px solid lavender; border-radius: 8px; box-shadow: 2px 2px 10px gainsboro; }
+.order-table { width: 100%; border-collapse: collapse; }
+.order-table td { padding: 10px 0; }
+.form-label { font-weight: bold; color: slategray; width: 40%; }
+.order-table input, .order-table textarea, .order-table select { width: 100%; padding: 10px; border: 2px solid lightsteelblue; border-radius: 5px; }
+.price-cell { color: dimgray; font-weight: bold; }
+.total-cell span { color: rebeccapurple; font-size: 20px; }
+.btn-submit { background-color: rebeccapurple; color: white; border: none; padding: 12px; border-radius: 5px; width: 100%; font-weight: bold; cursor: pointer; margin-top: 10px; }
+.form-err { color: crimson; font-size: 12px; display: block; }
+.order-success { text-align: center; background-color: honeydew; padding: 30px; border: 2px solid mediumseagreen; border-radius: 8px; display: none; }
+.success-icon { font-size: 40px; margin-bottom: 15px; }
+.order-success h3 { color: mediumseagreen; margin-bottom: 10px; }
+
+/* Order Form Interactive Styles */
+.input-error { border-color: crimson !important; background-color: #fff0f0; transition: all 0.3s ease; }
+.order-tracker { background-color: honeydew; border: 1px solid mediumseagreen; color: darkslategray; padding: 10px 20px; border-radius: 8px; margin-bottom: 20px; text-align: center; font-size: 18px; }
+
+/* DASHBOARD & CHARTS */
+.dash-body { background-color: whitesmoke; }
+.dash-intro { text-align: center; padding: 40px 5% 20px; }
+.charts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; padding: 20px; }
+.chart-card { background-color: white; border: 2px solid lavender; border-radius: 8px; padding: 20px; box-shadow: 2px 2px 10px gainsboro; position: relative; }
+.wide-card { grid-column: span 2; }
+.chart-title { color: rebeccapurple; font-family: 'Merriweather', serif; margin-bottom: 5px; }
+.chart-desc { color: darkgray; font-size: 14px; margin-bottom: 15px; }
+
+/* TOOLTIP & D3 ELEMENTS */
+.d3-tooltip { position: absolute; background-color: darkslategray; color: white; padding: 8px; border-radius: 5px; font-size: 12px; pointer-events: none; opacity: 0; z-index: 1000;}
+.axis text { font-size: 11px; fill: slategray; }
+.axis path, .axis line { stroke: lightsteelblue; }
+.grid line { stroke: gainsboro; stroke-dasharray: 3,3; }
+.grid .domain { display: none; }
+.footer { text-align: center; padding: 30px; background-color: rebeccapurple; color: lavender; margin-top: 40px; }
+.footer a { color: lightyellow; text-decoration: none; font-weight: bold; }
+
+/* Map Info Box */
+.map-info-box { position: absolute; top: 60px; right: 30px; background-color: rgba(255, 255, 255, 0.95); border: 2px solid rebeccapurple; padding: 15px; border-radius: 8px; pointer-events: none; box-shadow: 2px 2px 10px gainsboro; opacity: 0; transition: opacity 0.3s ease; }

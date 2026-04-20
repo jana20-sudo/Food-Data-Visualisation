@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Figo Coconut Fig Yogurt</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <nav class="navbar">
+        <span class="nav-brand">Figo</span>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#nutrition">Nutrition</a>
+            <a href="#order">Order</a>
+            <a href="dashboard.html" class="nav-dash">View Analysis →</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="about">
+        <div class="hero-inner">
+            <h1 class="hero-title">Figo</h1>
+            <p class="hero-subtitle">Coconut Milk &amp; Fig Yogurt</p>
+            <p class="hero-desc">Figo is a plant-based probiotic yogurt made from coconut milk, fermented using natural fig extract. It contains significantly less sugar than regular dairy yogurt while maintaining rich probiotic cultures.</p>
+            <a href="dashboard.html" class="btn-primary">View Market Analysis →</a>
+        </div>
+    </section>
+
+    <section class="why-section">
+        <h2 class="section-heading">Why Choose Figo?</h2>
+        <div class="three-cols">
+            <div class="col-card">
+                <div class="col-icon">🥥</div>
+                <h3>Coconut Milk Base</h3>
+                <p>Naturally sweet, easier to digest, and completely plant-based.</p>
+            </div>
+            <div class="col-card">
+                <div class="col-icon">🍑</div>
+                <h3>Fig Extract</h3>
+                <p>A natural prebiotic that fuels the fermentation process.</p>
+            </div>
+            <div class="col-card">
+                <div class="col-icon">🦠</div>
+                <h3>Probiotic Rich</h3>
+                <p>Live cultures supporting gut health naturally.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="nutrition-section" id="nutrition">
+        <h2 class="section-heading">The Sugar Problem</h2>
+        <div class="table-wrap">
+            <table class="nutrition-table">
+                <thead>
+                    <tr><th>Brand</th><th>Base</th><th>Sugar (per 100g)</th><th>Plant-Based</th><th>Added Sugar</th><th>Price</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Amul </td><td>Cow Milk</td><td>12.0g</td><td class="no">No</td><td class="no">Yes</td><td>₹40</td></tr>
+                    <tr><td>Mother Dairy</td><td>Cow Milk</td><td>13.0g</td><td class="no">No</td><td class="no">Yes</td><td>₹45</td></tr>
+                    <tr><td>Mondelez</td><td>Cow Milk</td><td>14.0g</td><td class="no">No</td><td class="no">Yes</td><td>₹60</td></tr>
+                    <tr><td>Cargill</td><td>Cow Milk</td><td>13.5g</td><td class="no">No</td><td class="no">Yes</td><td>₹65</td></tr>
+                    <tr><td>Epigamia</td><td>Cow Milk</td><td>14.0g</td><td class="no">No</td><td class="no">Yes</td><td>₹80</td></tr>
+                    <tr><td>Nestle</td><td>Cow Milk</td><td>13.5g</td><td class="no">No</td><td class="no">Yes</td><td>₹60</td></tr>
+                    <tr><td>Danone</td><td>Cow Milk</td><td>15.0g</td><td class="no">No</td><td class="no">Yes</td><td>₹70</td></tr>
+                    <tr class="figo-row"><td>🌿 Figo</td><td>Coconut Milk</td><td class="yes">5.0g ✓</td><td class="yes">Yes ✓</td><td class="yes">None ✓</td><td>₹35</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="order-section" id="order">
+        <h2 class="section-heading">Order Figo</h2>
+        <div class="order-container">
+            
+            <div class="order-tracker">
+                📊 Total Jars Ordered Today: <span id="global-order-count" style="font-weight: bold; color: rebeccapurple;">0</span>
+            </div>
+
+            <div id="order-form">
+                <table class="order-table">
+                    <tr><td class="form-label">Name</td><td><input type="text" id="fname"/><span class="form-err" id="err-name"></span></td></tr>
+                    <tr><td class="form-label">Address</td><td><textarea id="faddress"></textarea><span class="form-err" id="err-address"></span></td></tr>
+                    <tr><td class="form-label">Quantity</td><td><input type="number" id="fqty" value="1" min="1" onchange="updateTotal()" onkeyup="updateTotal()"/></td></tr>
+                    <tr><td class="form-label">Price per Jar</td><td class="price-cell">₹35</td></tr>
+                    <tr><td class="form-label">Total Amount</td><td class="total-cell"><span id="order-total">₹35</span></td></tr>
+                    <tr><td></td><td><button class="btn-submit" onclick="submitOrder()">Place Order</button></td></tr>
+                </table>
+            </div>
+            <div class="order-success" id="order-success">
+                <div class="success-icon">✅</div>
+                <p id="success-msg-text"></p>
+                <button class="btn-submit" onclick="resetOrder()">Place Another Order</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Figo · Nutri Food | Nutri Life</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

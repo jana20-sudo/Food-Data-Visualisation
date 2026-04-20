@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Figo – Market Analysis Dashboard</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet"/>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body class="dash-body">
+
+    <nav class="navbar dash-nav">
+        <a href="index.html" class="nav-brand">Figo</a>
+        <span class="dash-nav-title">Market Analysis Dashboard</span>
+        <a href="index.html" class="nav-back">← Back to Home</a>
+    </nav>
+
+    <div class="dash-intro">
+        <h1 class="section-heading">Yogurt Market Analysis</h1>
+    </div>
+
+    <div class="charts-grid">
+        <div class="chart-card">
+            <h3 class="chart-title">Bar Chart — Sugar Content by Brand</h3>
+            <div id="bar-chart"></div>
+        </div>
+
+        <div class="chart-card">
+            <h3 class="chart-title">Pie Chart — India Market Share</h3>
+            
+            <div style="text-align: center; margin-bottom: 10px;">
+                <label for="year-select" style="font-weight: bold; color: slategray;">Select Year: </label>
+                <select id="year-select" style="padding: 5px; border-radius: 4px; border: 1px solid lightsteelblue; outline: none; cursor: pointer;">
+                    <option value="2025" selected>2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                </select>
+            </div>
+
+            <div id="pie-chart"></div>
+        </div>
+
+        <div class="chart-card wide-card">
+            <h3 class="chart-title">Scatter Plot — Sugar vs Probiotic Efficacy</h3>
+            <div id="scatter-chart"></div>
+        </div>
+
+        <div class="chart-card">
+            <h3 class="chart-title">Histogram — Consumer Sugar Tolerance</h3>
+            <div id="hist-chart"></div>
+        </div>
+
+        <div class="chart-card">
+            <h3 class="chart-title">Force Simulation — Brand Ingredient Network</h3>
+            <div id="force-chart"></div>
+        </div>
+
+        <div class="chart-card wide-card">
+            <h3 class="chart-title">India Geo Map — State Demand</h3>
+            <div id="india-map"></div>
+        </div>
+
+        <div class="chart-card wide-card">
+            <h3 class="chart-title">Australia Geo Map — Export Potential</h3>
+            <div id="aus-map"></div>
+        </div>
+
+        <div class="chart-card wide-card">
+            <h3 class="chart-title">Health Impact — Blood Glucose Spike (per 100g)</h3>
+            <p class="chart-desc">See the exponential glucose spike when exceeding the 25g daily limit.</p>
+            
+            <div style="text-align: center; margin-bottom: 10px;">
+                <label for="sugar-tester" style="font-weight: bold; color: slategray;">Test a Sugar Amount (g): </label>
+                <input type="number" id="sugar-tester" value="5" min="0" max="40" style="padding: 5px; border-radius: 4px; border: 1px solid lightsteelblue; width: 60px;">
+            </div>
+
+            <div id="spike-chart"></div>
+        </div>
+    </div>
+
+    <div class="d3-tooltip" id="d3-tooltip"></div>
+
+    <footer class="footer">
+        <p>Figo · Market Analysis</p>
+        <a href="index.html">← Back to Product Page</a>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
